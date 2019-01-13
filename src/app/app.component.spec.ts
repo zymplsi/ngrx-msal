@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ngrx-msal');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should have a router outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ngrx-msal!');
+    expect(compiled.querySelector('router-outlet')).not.toBe(null);
   });
 });

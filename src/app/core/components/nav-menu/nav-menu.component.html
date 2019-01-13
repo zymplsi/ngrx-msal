@@ -1,0 +1,36 @@
+<div class="container">
+  <nav class="menu">
+    <ul class="menu-group">
+      <li
+        class="menu-group-item"
+        [routerLink]="['/about']"
+        routerLinkActive="about-link-active"
+      >
+        <a>About</a>
+      </li>
+
+      <ng-container *ngIf="(user$ | async) as user; else isLoggedIn">
+        <li class="menu-group-item">
+          <a class=""
+            >User
+            <span style="font-size: 1em; color: black;">
+              <i class="fas fa-sort-down"></i>
+            </span>
+          </a>
+          <ul class="menu-subgroup">
+            <li [routerLink]="['/home']" routerLinkActive="home-link-active">
+              <a class="">{{ user.name }}</a>
+            </li>
+            <li id="logout" (click)="logout()"><a class="">Logout</a></li>
+          </ul>
+        </li>
+      </ng-container>
+
+      <ng-template #isLoggedIn>
+        <li id="login" (click)="login()" class="menu-group-item">
+          <a class="">Login</a>
+        </li>
+      </ng-template>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,77 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: Roboto, sans-serif;
+  background-color: gray;
+}
+
+
+#not-found,#left,#right{
+  font-size: 1.6em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 3px;
+}
+
+.message-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#right{
+  animation: scaleOut 2.5s;
+
+}
+
+@keyframes scaleOut{
+  0%{
+    opacity:0;
+    transform: scale(0);
+  }
+  90%{
+    transform: scale(1.1)
+
+  }
+
+  100%{
+    opacity:1;
+    transform: scale(1)
+
+  }
+}
+
+#not-found {
+    animation: fadeIn 3s;
+}
+@keyframes fadeIn{
+  0%{
+    opacity:0
+  }
+
+  80%{
+    opacity:0
+  }
+  100%{
+    opacity:1
+  }
+}
+
+#left{
+ animation: moveFromLeft 3s 0s;
+}
+
+@keyframes moveFromLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px) scale(0.2);
+  }
+  100%{
+    opacity: 1 ;
+    transform: translate(0);
+  }
+}

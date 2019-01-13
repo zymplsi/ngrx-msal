@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  animation: you-rock 2s 0s 1;
+}
+
+
+
+@keyframes you-rock {
+  0% {
+    font-size: 0.5em;
+  }
+  80% {
+    font-size: 1.5em;
+  }
+
+  100% {
+    font-size: 1em;
+  }
+}

@@ -2,8 +2,19 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const protectedResourceMap: [string, string[]][] = [
+  ['https://graph.microsoft.com', ['user.readbasic.all', 'calendars.read']]
+];
+
 export const environment = {
-  production: false
+  production: false,
+  redirect_url: 'http://localhost:4200',
+  client_id: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX',
+  consentScopes: ['user.readbasic.all', 'calendars.read'],
+  protectedResourceMap: protectedResourceMap,
+  cacheLocation: 'localStorage'
+
+
 };
 
 /*

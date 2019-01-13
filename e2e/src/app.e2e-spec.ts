@@ -1,5 +1,6 @@
 import { AppPage } from './app.po';
 
+
 describe('workspace-project App', () => {
   let page: AppPage;
 
@@ -7,8 +8,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display navigation menu', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to ngrx-msal!');
+    expect(page.navigationMenuExist()).toEqual(true);
   });
 });

@@ -32,6 +32,14 @@
             "scripts": []
           },
           "configurations": {
+            "msal-setting":{
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": ".environment.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -66,6 +74,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ngrx-msal:build:production"
+            },
+            "msal-setting": {
+              "browserTarget": "ngrx-msal:build:msal-setting"
             }
           }
         },
@@ -135,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "ngrx-msal"
+  "defaultProject": "ngrx-msal",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
